@@ -1,6 +1,9 @@
 /* =========
    Grundlayout
    ========= */
+html {
+        font-size: 18px;
+   }
 
 :root {
       --bg: #0737ab;         /* blauer Hintergrund */
