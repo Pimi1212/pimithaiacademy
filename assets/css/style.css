@@ -302,7 +302,7 @@
 
     .section-subtitle {
       font-size: 0.95rem;
-      color: var(--muted);
+      color: #ffffff;
       margin-bottom: 1.8rem;
       max-width: 40rem;
     }
@@ -336,7 +336,7 @@
     .card h3 {
       margin: 0;
       font-size: 1.1rem;
-      color: #fefce8;
+      color: #ffffff;
     }
 
     .pill {
@@ -346,19 +346,19 @@
       background: rgba(15,23,42,0.9);
       border: 1px solid rgba(148,163,184,0.6);
       font-size: 0.78rem;
-      color: var(--muted);
+      color: #ffffff;
       margin-bottom: 0.4rem;
     }
 
     .price {
       font-weight: 700;
       font-size: 1.1rem;
-      color: #fde68a;
+      color: #ffffff;
     }
 
     .small {
       font-size: 0.85rem;
-      color: var(--muted);
+      color: #ffffff;
     }
 
     .card-footer {
@@ -387,7 +387,7 @@
       margin-top: 0;
       margin-bottom: 0.4rem;
       font-size: 1rem;
-      color: #e5e7eb;
+      color: #ffffff;
     }
 
     /* Testimonials */
@@ -403,14 +403,14 @@
       padding: 1.1rem 1.2rem;
       border: 1px solid rgba(30,64,175,0.7);
       font-size: 0.9rem;
-      color: var(--muted);
+      color: #ffffff;
     }
 
     .testimonial strong {
       display: block;
       margin-top: 0.5rem;
       font-size: 0.86rem;
-      color: #e5e7eb;
+      color: #ffffff;
     }
 
     /* About */
@@ -456,7 +456,7 @@
     .faq-item h3 {
       margin: 0 0 0.4rem;
       font-size: 0.98rem;
-      color: #e5e7eb;
+      color: #ffffff;
     }
 
     /* Call to Action */
@@ -473,25 +473,25 @@
       margin-top: 0;
       margin-bottom: 0.4rem;
       font-size: 1.5rem;
-      color: #f9fafb;
+      color: #ffffff;
     }
 
     .cta p {
       margin: 0.4rem 0 1.1rem;
       font-size: 0.96rem;
-      color: var(--muted);
+      color: #ffffff;
     }
 
     .cta-note {
       font-size: 0.8rem;
-      color: var(--muted);
+      color: #ffffff;
       margin-top: 0.7rem;
     }
 
     /* Kontakt-Hinweis */
     .contact-note {
       font-size: 0.86rem;
-      color: var(--muted);
+      color: #ffffff;
       margin-top: 1rem;
       text-align: center;
     }
@@ -500,12 +500,12 @@
       border-top: 1px solid rgba(15,23,42,0.9);
       padding: 1.7rem 1rem 2.3rem;
       font-size: 0.8rem;
-      color: var(--muted);
+      color: #ffffff;
       text-align: center;
     }
 
     footer a {
-      color: var(--muted);
+      color: #ffffff;
       text-decoration: underline;
       text-decoration-style: dotted;
     }
