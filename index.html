@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thai lernen mit Pimi – Onlinekurse für Alltag & Urlaub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thai lernen mit Pimi – moderne Online-Thai-Kurse für Alltag & Urlaub. Mit deutschen Erklärungen, Audios, PDFs und optionalen ANKI-Decks. Perfekt für Einsteiger." />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Thai lernen mit Pimi – Onlinekurse für Alltag & Urlaub">
+  <meta property="og:description" content="Lerne Thai verständlich, humorvoll & praxisnah. Mit Audios, PDFs und optionalen ANKI-Decks. Ideal für Anfänger und Thailand-Fans.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thailernenmitpimi.academy">
+  <!-- Falls du später ein Vorschaubild hast, hier einfügen:
+  <meta property="og:image" content="https://thailernenmitpimi.academy/og-image.jpg">
+  -->
+
+  <style>
+    :root {
+      --bg: #0f172a;         /* dunkelblauer Hintergrund */
+      --bg-alt: #0b1220;     /* noch dunkler fürs Hero */
+      --card-bg: #020617;    /* sehr dunkel für Karten */
+      --accent: #f97316;     /* Orange */
+      --accent-soft: rgba(249,115,22,0.16);
+      --accent-dark: #ea580c;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: rgba(148,163,184,0.35);
+      --max-width: 1080px;
+      --radius: 16px;
+      --shadow: 0 18px 45px rgba(15,23,42,0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0, #020617 55%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Header / Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15,23,42,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15,23,42,0.9);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9fafb;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #f9fafb;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #fb923c);
+      color: #0b1120;
+      box-shadow: 0 12px 30px rgba(248, 150, 54, 0.65);
+      border: 1px solid rgba(248, 150, 54, 0.8);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 38px rgba(248, 150, 54, 0.8);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      background: rgba(15,23,42,0.7);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3.5rem;
+    }
+
+    section {
+      margin: 3.5rem 0;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .hero-left {
+      padding: 1rem 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.5);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 2.9rem);
+      margin: 0 0 0.8rem;
+      letter-spacing: -0.03em;
+      color: #f9fafb;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+      max-width: 34rem;
+    }
+
+    .hero-subtitle strong {
+      color: #e5e7eb;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, #1e293b, #020617 55%);
+      border-radius: var(--radius);
+      padding: 1.6rem 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148,163,184,0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(248,150,54,0.12), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      color: #f9fafb;
+    }
+
+    .hero-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-list li {
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .hero-list li span.check {
+      color: #bbf7d0;
+      font-weight: 700;
+      margin-top: 0.05rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Abschnitts-Überschriften */
+    .section-title {
+      font-size: 1.7rem;
+      margin-bottom: 0.4rem;
+      color: #f9fafb;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+      max-width: 40rem;
+    }
+
+    /* Kurskarten */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.95), #020617);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 35px rgba(15,23,42,0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-highlight {
+      border-color: var(--accent);
+      box-shadow: 0 18px 40px rgba(248,150,54,0.45);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #fefce8;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.6);
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fde68a;
+    }
+
+    .small {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-footer {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    /* Vorteilskacheln */
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .benefit {
+      background: rgba(15,23,42,0.95);
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(30,64,175,0.7);
+      font-size: 0.9rem;
+    }
+
+    .benefit h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      color: #e5e7eb;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.3rem;
+    }
+
+    .testimonial {
+      background: rgba(15,23,42,0.95);
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(30,64,175,0.7);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.86rem;
+      color: #e5e7eb;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .about-box {
+      background: rgba(15,23,42,0.95);
+      border-radius: 14px;
+      padding: 1.3rem 1.4rem;
+      border: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    .about-tag {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ */
+    .faq {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .faq-item {
+      background: rgba(15,23,42,0.95);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(51,65,85,0.9);
+      font-size: 0.9rem;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 0.4rem;
+      font-size: 0.98rem;
+      color: #e5e7eb;
+    }
+
+    /* Call to Action */
+    .cta {
+      background: radial-gradient(circle at top, rgba(56,189,248,0.2), transparent 60%);
+      border-radius: var(--radius);
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: 1.7rem 1.6rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.5rem;
+      color: #f9fafb;
+    }
+
+    .cta p {
+      margin: 0.4rem 0 1.1rem;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .cta-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.7rem;
+    }
+
+    /* Kontakt-Hinweis */
+    .contact-note {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      border-top: 1px solid rgba(15,23,42,0.9);
+      padding: 1.7rem 1rem 2.3rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+
+    /* Responsiv */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none; /* Einfach: keine mobile Navigation für die erste Version */
+      }
+
+      .nav {
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding-inline: 1rem;
+      }
+
+      .hero {
+        margin-top: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span>Thai</span> lernen mit Pimi
+      </div>
+      <nav class="nav-links">
+        <a href="#kurse">Kurse</a>
+        <a href="#fuer-wen">Für wen?</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#cta" class="btn btn-primary">Kurs wählen</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="start">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span>🌶</span> Online-Thai-Kurse · Alltag & Urlaub · mit Pimi
+        </div>
+        <h1>Thai lernen – verständlich, humorvoll & alltagstauglich.</h1>
+        <p class="hero-subtitle">
+          <strong>Thai lernen mit Pimi</strong> ist dein Onlinekurs für echte Situationen:
+          Begrüßen, Bestellen, Smalltalk, Zahlen, Alltag – mit deutschen Erklärungen, Audio-Tracks
+          und optionalen ANKI-Decks zum Wiederholen.
+        </p>
+        <div class="hero-buttons">
+          <a href="#kurse" class="btn btn-primary">Kurs auswählen & zu Gumroad</a>
+          <a href="#fuer-wen" class="btn btn-ghost">Mehr über die Kurse erfahren</a>
+        </div>
+        <p class="hero-meta">
+          <span>Perfekt für:</span> Thailand-Reisen, Beziehungen mit Thai-Partner:innen, Auswanderungspläne
+          – und alle, die mehr sagen wollen als „Sawasdee“.
+        </p>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-inner">
+          <h3>Nach wenigen Lektionen kannst du …</h3>
+          <ul class="hero-list">
+            <li><span class="check">✓</span><span>freundlich grüßen, dich vorstellen & einfache Fragen stellen</span></li>
+            <li><span class="check">✓</span><span>im Restaurant bestellen (inkl. „nicht so scharf, bitte“ 😅)</span></li>
+            <li><span class="check">✓</span><span>Zahlen, Preise & Uhrzeiten verstehen und sagen</span></li>
+            <li><span class="check">✓</span><span>kurze Sätze mit Lautschrift lesen & aussprechen</span></li>
+          </ul>
+          <p class="hero-note">
+            Alle Kurse enthalten: Videos/Audio, PDF-Material · optional: ANKI-Decks für noch bessere Wiederholung.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Kurse -->
+    <section id="kurse">
+      <h2 class="section-title">Kurse & Lernpakete</h2>
+      <p class="section-subtitle">
+        Wähle den Kurs, der zu deinem Einstieg passt. Der Kauf läuft sicher & bequem über Gumroad.
+        Du erhältst sofort Zugriff auf alle Materialien.
+      </p>
+
+      <div class="cards">
+        <!-- Kurs 1 -->
+        <article class="card card-highlight">
+          <div>
+            <span class="pill">Level A0–A1 · Einsteiger</span>
+            <h3>Grundlagen & Urlaub – Thai für den Alltag</h3>
+            <p class="small">
+              Der ideale Einstieg, wenn du bisher kaum oder gar kein Thai kannst. Du lernst wichtige
+              Wörter, Sätze und Redemittel für Alltag & Urlaub: Begrüßung, Restaurant, Zahlen, einfache
+              Fragen & Antworten.
+            </p>
+            <p class="small">
+              Inklusive Audio, PDFs und optionalem ANKI-Deck für Vokabel- und Satzwiederholung.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="price">Beispielpreis: 39&nbsp;€</p>
+            <p class="small">Einmal zahlen – dauerhaft auf die Inhalte zugreifen.</p>
+            <!-- TODO: Hier deinen echten Gumroad-Link für Kurs 1 einfügen -->
+            <a class="btn btn-primary" href="https://gumroad.com/l/DEIN_KURS1_LINK" target="_blank" rel="noopener">
+              Kurs „Grundlagen & Urlaub“ auf Gumroad ansehen
+            </a>
+          </div>
+        </article>
+
+        <!-- Kurs 2 -->
+        <article class="card">
+          <div>
+            <span class="pill">Level A1 Aufbau</span>
+            <h3>A1 Aufbaukurs – mehr Sicherheit & Wortschatz</h3>
+            <p class="small">
+              Du kennst schon erste Grundlagen? Im Aufbaukurs vertiefst du Grammatik, Aussprache
+              und Wortschatz. Mit Dialogen, Beispielsätzen und typischen Situationen aus dem Alltag in Thailand.
+            </p>
+            <p class="small">
+              Ideal, wenn du regelmäßig in Thailand bist oder mit Thai sprechenden Menschen zu tun hast.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="price">Beispielpreis: 59&nbsp;€</p>
+            <p class="small">Inklusive weiterführenden Übungen, Audio & zusätzlichem Material.</p>
+            <!-- TODO: Hier deinen echten Gumroad-Link für Kurs 2 einfügen -->
+            <a class="btn btn-ghost" href="https://gumroad.com/l/DEIN_KURS2_LINK" target="_blank" rel="noopener">
+              A1 Aufbaukurs auf Gumroad ansehen
+            </a>
+          </div>
+        </article>
+
+        <!-- Spezial -->
+        <article class="card">
+          <div>
+            <span class="pill">Spezial & Bonus</span>
+            <h3>Mini-Kurse & Spezialthemen</h3>
+            <p class="small">
+              Kurze, fokussierte Lektionen zu Spezialthemen: Zahlen intensiv, Restaurant & Streetfood,
+              die wichtigsten Verben, Smalltalk & Dating, häufige Redewendungen u.v.m.
+            </p>
+            <p class="small">
+              Perfekt als Ergänzung zu den Hauptkursen oder für alle, die bestimmte Themen gezielt üben wollen.
+            </p>
+          </div>
+          <div class="card-footer">
+            <p class="price">ab ca. 9&nbsp;€</p>
+            <p class="small">Jeder Mini-Kurs ist ein in sich abgeschlossenes Paket.</p>
+            <!-- TODO: Hier deinen echten Gumroad-Link zur Übersicht deiner Produkte einfügen -->
+            <a class="btn btn-ghost" href="https://gumroad.com/DEIN_PROFIL_ODER_OVERVIEW" target="_blank" rel="noopener">
+              Alle Thai-Materialien auf Gumroad ansehen
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Für wen -->
+    <section id="fuer-wen">
+      <h2 class="section-title">Für wen sind die Kurse geeignet?</h2>
+      <p class="section-subtitle">
+        Die Kurse sind so aufgebaut, dass du auch als kompletter Anfänger gut mitkommst.
+        Du brauchst keine Vorkenntnisse – nur Neugier und ein bisschen Lernzeit pro Woche.
+      </p>
+
+      <div class="benefits">
+        <article class="benefit">
+          <h3>Reisende & Thailand-Fans</h3>
+          <p>
+            Du fliegst nach Thailand oder warst schon mehrfach dort? Mit ein bisschen Thai öffnest
+            du Türen: im Restaurant, im Taxi, auf dem Markt oder bei deiner Lieblings-Garküche.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <h3>Beziehungen & Familie</h3>
+          <p>
+            Dein Partner / deine Partnerin kommt aus Thailand – oder du hast thailändische Familie?
+            Mit einfachem Thai zeigst du Respekt, Nähe und echtes Interesse an ihrer Sprache.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <h3>Auswanderungspläne</h3>
+          <p>
+            Wenn du darüber nachdenkst, länger in Thailand zu leben, ist Sprache der Schlüssel zu
+            Integration, Behördengängen, Nachbarschaft & Alltag.
+          </p>
+        </article>
+
+        <article class="benefit">
+          <h3>Neugierige Sprachlernende</h3>
+          <p>
+            Du magst Sprachen, willst aber nicht in Grammatikbüchern versinken? Dann passen dir
+            kurze, praxisnahe Lektionen mit Humor & Beispielen aus dem echten Leben.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section id="ablauf">
+      <h2 class="section-title">Wie läuft das mit Gumroad ab?</h2>
+      <p class="section-subtitle">
+        Der Kauf ist einfach und sicher. Gumroad übernimmt den Bezahlprozess – du bekommst sofort Zugang
+        zu allen Kursinhalten.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <div class="about-tag">In 4 Schritten zum Kurs</div>
+          <ol class="small">
+            <li><strong>Kurs auswählen:</strong> Klicke hier auf der Seite auf den Button zu deinem Wunschkurs.</li>
+            <li><strong>Weiter zu Gumroad:</strong> Du wirst auf die Gumroad-Seite des Kurses weitergeleitet.</li>
+            <li><strong>Sicher bezahlen:</strong> Wähle deine bevorzugte Zahlungsmethode (z.&nbsp;B. Karte, ggf. PayPal o.Ä.).</li>
+            <li><strong>Zugang erhalten:</strong> Direkt nach dem Kauf erhältst du Zugriff auf die Dateien
+              (Videos/Audio, PDFs, ggf. ANKI-Decks) und kannst mit dem Lernen starten.</li>
+          </ol>
+          <p class="small">
+            Gumroad ist eine etablierte Plattform für digitale Produkte. Du kannst deine Käufe jederzeit über
+            dein Gumroad-Konto abrufen.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <div class="about-tag">Über „Thai lernen mit Pimi“</div>
+          <p>
+            Hinter <strong>Thai lernen mit Pimi</strong> stehen Pimi und Jürgen. Pimi ist Thai-Muttersprachlerin,
+            mit einem Faible für klare Erklärungen (und gutes Essen 😄). Jürgen bringt die deutsche Perspektive
+            und Struktur mit – und kennt die typischen Stolpersteine von Lernenden.
+          </p>
+          <p>
+            Gemeinsam haben wir den Kurs so aufgebaut, wie wir selbst gerne Thai gelernt hätten:
+            kurze, klare Einheiten, ehrliche Alltags-Sprache, Lautschrift für den Einstieg
+            und viele Beispiele aus echten Situationen.
+          </p>
+          <p class="small">
+            Unser Ziel: Du sollst dich nicht schämen, Thai zu sprechen – sondern Spaß daran haben.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="feedback">
+      <h2 class="section-title">Was Lernende sagen</h2>
+      <p class="section-subtitle">
+        Einige Stimmen von Menschen, die bereits mit „Thai lernen mit Pimi“ arbeiten.
+      </p>
+
+      <div class="testimonials">
+        <article class="testimonial">
+          „Ich war schon mehrfach in Thailand und habe mich nie getraut, auf Thai zu sprechen.
+          Nach den ersten Lektionen habe ich im Restaurant bestellt – und wurde sofort angelächelt.
+          Die Kombination aus Deutsch-Erklärung, Audio und Lautschrift ist perfekt.“
+          <strong>— Sabine, 49, Thailand-Fan</strong>
+        </article>
+
+        <article class="testimonial">
+          „Meine Partnerin ist Thailänderin. Ich wollte mehr als nur ein paar Standardfloskeln.
+          Die Lektionen sind kurz, klar und realistisch. Besonders hilfreich sind die Beispielsätze
+          für Alltagssituationen.“
+          <strong>— Markus, 38, lernt für den Alltag</strong>
+        </article>
+
+        <article class="testimonial">
+          „Ich mag, dass nichts geschönt wird: Man lernt die Sprache, wie sie wirklich gesprochen wird.
+          Und trotzdem wird alles sehr verständlich auf Deutsch erklärt. Top für Berufstätige,
+          die abends nur 20–30 Minuten Zeit haben.“
+          <strong>— Laura, 33, bereitet Langzeitaufenthalt vor</strong>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2 class="section-title">Häufige Fragen (FAQ)</h2>
+      <p class="section-subtitle">
+        Noch unsicher? Hier ein paar der häufigsten Fragen zur Kursstruktur, Technik & Niveau.
+      </p>
+
+      <div class="faq">
+        <article class="faq-item">
+          <h3>Welche technischen Voraussetzungen brauche ich?</h3>
+          <p>
+            Du brauchst nur ein Gerät mit Internetzugang (Laptop, Tablet oder Smartphone) und die Möglichkeit,
+            PDFs & Audios abzuspielen. Optional kannst du ANKI (kostenlose Software/App) für die Lernkarten nutzen.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Ist alles auf Deutsch erklärt?</h3>
+          <p>
+            Ja. Die Erklärungen sind auf Deutsch, die Beispiele und Dialoge enthalten Thai, Lautschrift
+            und Übersetzungen. So kannst du Schritt für Schritt einsteigen – auch ohne Sprach-Vorkenntnisse.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Wie lange habe ich Zugriff auf den Kurs?</h3>
+          <p>
+            Du erhältst nach dem Kauf über Gumroad dauerhaft Zugriff auf die Dateien
+            (solange Gumroad als Plattform existiert). Du kannst die Materialien auch für dich lokal speichern.
+          </p>
+        </article>
+
+        <article class="faq-item">
+          <h3>Passt der Kurs zu mir, wenn ich schon etwas Thai kann?</h3>
+          <p>
+            Der Einsteigerkurs richtet sich an A0–A1. Wenn du schon Grundlagen hast,
+            ist der <strong>A1 Aufbaukurs</strong> wahrscheinlich besser für dich.
+            Du kannst mit Kurs 1 wiederholen oder direkt bei Kurs 2 starten.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta">
+      <div class="cta">
+        <h2>Bereit, dein erstes Thai zu sprechen?</h2>
+        <p>
+          Such dir den Kurs aus, der am besten zu deinem Start passt. Der Rest ist einfach:
+          Button klicken, auf Gumroad bezahlen, loslernen.
+        </p>
+        <div class="hero-buttons" style="justify-content:center; margin-top:0.5rem;">
+          <!-- TODO: Auch hier: echte Gumroad-Links eintragen -->
+          <a class="btn btn-primary" href="https://gumroad.com/l/DEIN_KURS1_LINK" target="_blank" rel="noopener">
+            Grundlagen & Urlaub – jetzt starten
+          </a>
+          <a class="btn btn-ghost" href="https://gumroad.com/l/DEIN_KURS2_LINK" target="_blank" rel="noopener">
+            A1 Aufbaukurs ansehen
+          </a>
+        </div>
+        <p class="cta-note">
+          Du bist unsicher, welcher Kurs besser passt? Schreib uns einfach –
+          wir helfen dir bei der Auswahl.
+        </p>
+      </div>
+      <p class="contact-note">
+        Kontakt (z.&nbsp;B. für Fragen vor dem Kauf):<br>
+        <!-- TODO: Hier deine echte Kontakt-E-Mail-Adresse eintragen -->
+        <strong>deine-email@thailernenmitpimi.academy</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> thailernenmitpimi.academy · Thai lernen mit Pimi ·
+    <!-- TODO: Später Impressum/Datenschutz verlinken -->
+    <a href="#">Impressum</a> ·
+    <a href="#">Datenschutz</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
