@@ -180,17 +180,30 @@ html {
     }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.5);
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
+     display: inline-flex;
+     align-items: center;
+     gap: 0.6rem;
+
+     /* Größe */
+     font-size: 1rem;              /* vorher 0.8rem → deutlich besser lesbar */
+     padding: 0.5rem 1.2rem;       /* größerer Innenabstand */
+
+     /* Form */
+     border-radius: 999px;
+
+     /* Hintergrund optisch stärker */
+     background: rgba(30, 41, 59, 0.85); /* etwas heller und sichtbarer */
+     border: 1px solid rgba(148,163,184,0.6);
+
+     /* Leichter Glow */
+     box-shadow: 0 4px 18px rgba(255, 172, 82, 0.25);
+
+     /* Farbe */
+     color: var(--muted);
+
+     margin-bottom: 1.4rem;
+   }
+
 
     .hero-badge span {
       display: inline-flex;
