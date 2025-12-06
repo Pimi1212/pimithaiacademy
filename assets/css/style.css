@@ -3,7 +3,7 @@
    ========= */
 
 :root {
-      --bg: #03b52f;         /* blauer Hintergrund */
+      --bg: #2b4da0;         /* blauer Hintergrund */
       --bg-alt: #0b1220;     /* noch dunkler fürs Hero */
       --card-bg: #020617;    /* sehr dunkel für Karten */
       --accent: #c9a75e;     /* gold */
@@ -24,7 +24,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #03b52f;
+      background: #2b4da0;
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
