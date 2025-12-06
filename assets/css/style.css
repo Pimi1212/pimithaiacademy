@@ -10,7 +10,7 @@
       --accent-soft: rgba(249,115,22,0.16);
       --accent-dark: #333333;
       --text: #ffffff;
-      --muted: #9ca3af;
+      --muted: #ffffff;
       --border: rgba(148,163,184,0.35);
       --max-width: 1080px;
       --radius: 16px;
@@ -296,13 +296,13 @@
     .section-title {
       font-size: 1.7rem;
       margin-bottom: 0.4rem;
-      color: #ffffff;
+      color: var(--text);
       letter-spacing: -0.02em;
     }
 
     .section-subtitle {
       font-size: 0.95rem;
-      color: #ffffff;
+      color: var(--text);
       margin-bottom: 1.8rem;
       max-width: 40rem;
     }
@@ -336,7 +336,7 @@
     .card h3 {
       margin: 0;
       font-size: 1.1rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .pill {
@@ -346,19 +346,19 @@
       background: rgba(15,23,42,0.9);
       border: 1px solid rgba(148,163,184,0.6);
       font-size: 0.78rem;
-      color: #ffffff;
+      color: var(--text);
       margin-bottom: 0.4rem;
     }
 
     .price {
       font-weight: 700;
       font-size: 1.1rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .small {
       font-size: 0.85rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .card-footer {
@@ -387,7 +387,7 @@
       margin-top: 0;
       margin-bottom: 0.4rem;
       font-size: 1rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     /* Testimonials */
@@ -403,14 +403,14 @@
       padding: 1.1rem 1.2rem;
       border: 1px solid rgba(30,64,175,0.7);
       font-size: 0.9rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .testimonial strong {
       display: block;
       margin-top: 0.5rem;
       font-size: 0.86rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     /* About */
@@ -456,7 +456,7 @@
     .faq-item h3 {
       margin: 0 0 0.4rem;
       font-size: 0.98rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     /* Call to Action */
@@ -473,25 +473,25 @@
       margin-top: 0;
       margin-bottom: 0.4rem;
       font-size: 1.5rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .cta p {
       margin: 0.4rem 0 1.1rem;
       font-size: 0.96rem;
-      color: #ffffff;
+      color: var(--text);
     }
 
     .cta-note {
       font-size: 0.8rem;
-      color: #ffffff;
+      color: var(--text);
       margin-top: 0.7rem;
     }
 
     /* Kontakt-Hinweis */
     .contact-note {
       font-size: 0.86rem;
-      color: #ffffff;
+      color: var(--text);
       margin-top: 1rem;
       text-align: center;
     }
@@ -500,12 +500,12 @@
       border-top: 1px solid rgba(15,23,42,0.9);
       padding: 1.7rem 1rem 2.3rem;
       font-size: 0.8rem;
-      color: #ffffff;
+      color: var(--text);
       text-align: center;
     }
 
     footer a {
-      color: #ffffff;
+      color: var(--text);
       text-decoration: underline;
       text-decoration-style: dotted;
     }
