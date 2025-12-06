@@ -57,6 +57,31 @@ html {
       border-bottom: 1px solid rgba(15,23,42,0.9);
     }
 
+   /* Wrapper .logo ist bei dir Teil der Navigation */
+   /* Wir machen den Inhalt darin horizontal und schön ausgerichtet */
+
+   .logo a {
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     gap: 10px;   /* Abstand zwischen Bild und Text */
+   }
+
+   /* Bildgröße */
+   .logo-img {
+     height: 42px;   /* kannst du anpassen */
+     width: auto;
+     display: block;
+   }
+
+   /* Text neben dem Logo */
+   .logo-text {
+     font-size: 1.1rem;
+     font-weight: 600;
+     color: white;  /* wenn deine Navigation dunkel ist */
+     white-space: nowrap;
+   }
+
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
