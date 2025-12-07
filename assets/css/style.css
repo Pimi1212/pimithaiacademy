@@ -549,13 +549,27 @@ html {
         justify-content: space-between;
       }
     }
+     
+   @media (max-width: 600px) {
+     main {
+          padding-inline: 1rem;
+     }
 
-    @media (max-width: 600px) {
-      main {
-        padding-inline: 1rem;
-      }
+     .hero {
+    margin-top: 1.3rem;
+     }
 
-      .hero {
-        margin-top: 1.3rem;
-      }
-    }
+  /* Hier kommt die Logo-Anpassung für Mobile */
+
+     .logo a {
+       flex-direction: column;      /* Bild oben, Text darunter */
+       align-items: flex-start;     /* linksbündig */
+       gap: 2px;                    /* kleiner Abstand zwischen Bild und Text */
+     }
+
+     .logo-text {
+       font-size: 1rem;             /* etwas kleiner auf dem Handy */
+       white-space: normal;         /* DARF umbrechen, nichts wird abgeschnitten */
+       line-height: 1.2;
+     }
+   }
