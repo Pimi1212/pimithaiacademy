@@ -358,6 +358,29 @@ html {
       color: #fefce8;
     }
 
+   /* Karten – Light Theme erzwingen */
+
+   .course-card,
+   .card,
+   section,
+   .box {
+  background-color: var(--bg-card) !important;
+  color: var(--text-main) !important;
+   }
+   .course-card h1,
+   .course-card h2,
+   .course-card h3,
+   .course-card p,
+   .course-card li {
+   color: var(--text-main);
+   }
+
+   .course-card p,
+   .course-card li {
+     color: var(--text-muted);
+   }
+
+
     .pill {
       display: inline-flex;
       padding: 0.18rem 0.6rem;
