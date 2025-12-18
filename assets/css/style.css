@@ -573,3 +573,141 @@ html {
        line-height: 1.2;
      }
    }
+
+/* ================================
+   LIGHT THEME OVERRIDE (am Ende einfügen)
+   ================================ */
+
+:root{
+  --bg: #f7fafc;              /* Seitenhintergrund */
+  --bg-alt: #eef2ff;          /* Hero/Alt-Flächen */
+  --card-bg: #ffffff;         /* Karten */
+  --accent: #10b981;          /* Primary */
+  --accent-soft: rgba(16,185,129,0.14);
+  --accent-dark: #065f46;
+  --text: #111827;            /* Haupttext */
+  --muted: #6b7280;           /* Nebentext */
+  --border: rgba(17,24,39,0.14);
+  --shadow: 0 14px 35px rgba(15,23,42,0.10);
+}
+
+/* Seite */
+body{
+  background: radial-gradient(circle at top, #ffffff 0%, #f1f5f9 65%) !important;
+  color: var(--text) !important;
+}
+
+/* Header hell + sticky weiterhin */
+header{
+  background: rgba(255,255,255,0.85) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Logo/Navigation lesbar */
+.logo-text{ color: var(--text) !important; }
+.logo{ color: var(--text) !important; }
+.logo span{ color: var(--accent) !important; }
+
+.nav-links a{
+  color: var(--muted) !important;
+}
+.nav-links a:hover{
+  color: var(--text) !important;
+}
+
+/* Buttons (Primary bleibt grün, Ghost hell) */
+.btn-primary{
+  background: linear-gradient(135deg, var(--accent), #34d399) !important;
+  color: #053a2a !important;
+  box-shadow: 0 12px 26px rgba(16,185,129,0.30) !important;
+  border: 1px solid rgba(16,185,129,0.45) !important;
+}
+.btn-ghost{
+  background: rgba(255,255,255,0.75) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+.btn-ghost:hover{
+  border-color: rgba(16,185,129,0.55) !important;
+  background: rgba(255,255,255,0.95) !important;
+}
+
+/* Hero */
+h1{ color: var(--text) !important; }
+.hero-subtitle{ color: var(--muted) !important; }
+.hero-subtitle strong{ color: var(--text) !important; }
+
+.hero-badge{
+  background: rgba(255,255,255,0.8) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--muted) !important;
+  box-shadow: 0 10px 22px rgba(15,23,42,0.08) !important;
+}
+.hero-badge span{
+  background: var(--accent-soft) !important;
+  color: var(--accent-dark) !important;
+}
+
+.hero-card{
+  background: radial-gradient(circle at top left, #ffffff, #f1f5f9 65%) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+}
+.hero-card h3{ color: var(--text) !important; }
+.hero-list{ color: var(--muted) !important; }
+.hero-list li span.check{ color: var(--accent) !important; }
+
+/* Section titles */
+.section-title{ color: var(--text) !important; }
+.section-subtitle{ color: var(--muted) !important; }
+
+/* Cards (Kurse) */
+.card{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+  color: var(--text) !important;
+}
+.card h3{ color: var(--text) !important; }
+.price{ color: var(--accent-dark) !important; }
+.small{ color: var(--muted) !important; }
+
+.pill{
+  background: rgba(16,185,129,0.10) !important;
+  border: 1px solid rgba(16,185,129,0.25) !important;
+  color: var(--accent-dark) !important;
+}
+
+/* Benefit / Testimonial / About / FAQ */
+.benefit,
+.testimonial,
+.about-box,
+.faq-item{
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+  color: var(--text) !important;
+}
+.benefit h3,
+.testimonial strong,
+.faq-item h3{ color: var(--text) !important; }
+.testimonial{ color: var(--muted) !important; }
+.about-tag{ color: var(--muted) !important; }
+
+/* CTA */
+.cta{
+  background: radial-gradient(circle at top, rgba(16,185,129,0.16), transparent 60%) !important;
+  border: 1px solid rgba(16,185,129,0.28) !important;
+  box-shadow: var(--shadow) !important;
+}
+.cta h2{ color: var(--text) !important; }
+.cta p, .cta-note{ color: var(--muted) !important; }
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--border) !important;
+  color: var(--muted) !important;
+}
+footer a{ color: var(--muted) !important; }
+
