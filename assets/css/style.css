@@ -711,3 +711,13 @@ footer{
 }
 footer a{ color: var(--muted) !important; }
 
+/* Hero Meta – bessere Lesbarkeit im Light Theme */
+.hero-meta {
+  color: #334155 !important;      /* dunkler als muted */
+  font-size: 0.9rem;
+}
+
+.hero-meta span {
+  color: #0f172a !important;      /* sehr gut lesbar */
+  font-weight: 600;
+}
